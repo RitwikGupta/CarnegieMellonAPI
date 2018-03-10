@@ -9,3 +9,6 @@ from CarnegieMellonAPI import printers
 statuses = printers.get_status()
 
 ```
+
+# License
+This project is licensed under the terms of the [GPLv2 license](LICENSE)
