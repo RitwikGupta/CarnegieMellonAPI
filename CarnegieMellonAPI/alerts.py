@@ -19,7 +19,7 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 
 import requests
 from bs4 import BeautifulSoup
-from typing import List, Dict, Any
+from typing import List, Dict
 
 session = requests.session()
 
@@ -41,7 +41,6 @@ def get_service_alerts() -> List[Dict[str, str]]:
         # Ugly hack to remove CDATA
         desc = desc.replace('![CDATA[', '')[:-2]
         pub_date = item.find('pubdate').text
-
 
         alerts.append({
             'title': title,
